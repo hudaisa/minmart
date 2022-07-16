@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #0c0c0c;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+section.review-section {
+    padding: 0 50px;
+    margin: 61px 0;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h2 strong {
+    background-color: #ff5b7d;
+    color: white;
+    padding: 13px;
+    margin-left: 5px;
+}
+
+hr {
+    margin-top: 40px;
+}
+.box-element{
+    margin: 90px;
+}
+.review-box {
+    display: flex;
+}
+
+.reviews {
+    width: 50%;
+}
+
+.reviews h3 {
+    font-size: 15px;
+    font-weight: 800;
+    background-color: cornflowerblue;
+    width: 30%;
+    padding: 10px;
+    color: white;
+}
+
+.reviews p {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+
+i.fa.fa-star {margin-bottom: 20px;}
+
+.review-comment p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+form.review-form {
+    margin: auto;
+    width: 50%;
+}
+
+label {
+    display: block;
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    top: 26px;
+}
+
+input#id_name , input#id_review {
+    position: relative;
+    left: 116px;
+    bottom: 28px;
+    text-align: center;
+    width: 510px;
+    padding: 20px;
+}
+
+button.btn {
+    display: block;
+    margin: auto;
+    width: 160px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    left: 45px;
+}
+
+label#id_name-error {
+    font-size: 9px;
+    text-align: center;
+    position: relative;
+    top: 0px;
+    left: 52px;
+    /* background: black; */
+    /* color: white; */
+    text-transform: initial;
+    /* width: 108px; */
+    /* margin: auto; */
+    font-weight: 900;
+}
+
+label#id_review-error {
+    font-size: 9px;
+    text-align: center;
+    position: relative;
+    top: 0px;
+    left: 52px;
+    /* background: black; */
+    /* color: white; */
+    text-transform: initial;
+    /* width: 108px; */
+    /* margin: auto; */
+    font-weight: 900;
+}

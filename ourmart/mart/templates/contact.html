@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <title>Min-Mart</title>
+  {% load static %}
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static  'bootstrap.css'%}">
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- font awesome style -->
+  <link href="{% static 'font-awesome.min.css'%}" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'style.css'%}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'responsive.css'%}" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <main>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <div class="delivery-info">
+        <div class="container">
+        <p>
+          Free Delivery on orders above Rs 800. Rs 150 will apply for delivery on order less than Rs 800.
+        </p>
+        </div>
+      </div>
+      <header class="header_section">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand " href="{% url 'index' %}"> Min-Mart </a>
+  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'about' %}"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'review' %}">review</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}">contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <form method="get" action="/search" class="form-inline justify-content-center">
+                  <input type="text" placeholder="search items" name="query" id="query" class="search">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+    </div>
+
+  <!-- form section -->
+    <section class="head">
+      <div class="container">
+        <h1>Contact <strong>US</strong></h1>
+    </div>
+    </section>
+    <section class="contact">
+      <div class="container">
+          <div class="details">
+              <div class="form-box">
+                  <form class="myForm" method="POST" action="{% url 'contact' %}">
+                      {% csrf_token %}
+                      <div class="feild"> 
+                          <h4>name</h4>
+                          <input type="text" minlength="2" name="name" >
+                          <label for="cname"  id="-error" class="error" ></label>
+                      </div>    
+                      <div class="feild">
+                          <h4>email</h4>        
+                          <input type="email" name="email" class="email" id="email" >
+                          <label for="cemail" id="-error" class="error" ></label>
+
+                      </div>
+                      <div class="feild">
+                          <h4>phone number</h4>        
+                          <input type="number" name="number" minlength="11"  >
+                          <label for="cnumber" id="-error" class="error" ></label>
+                      </div>        
+                      <div class="message">
+                          <h4>message</h4>
+                          <input type="text" minlength="10" class="message" id="message" > 
+                          <label for="cmessage"  id="-error" class="error"  name="message" ></label>
+                      </div>
+                      <div class="button">
+                          <input type="submit" value="SUBMIT">
+                      </div>
+                  </form>
+                </div>
+              <div class="contact-box">
+                  <h2>contact information</h2>
+                  <h3>contact-01</h3>
+                  <p>
+                      <span><i class="fa-solid fa-phone"></i></span>
+                    <a href="tel:+61 (02) 6722 2548">+61 (02) 6722 2548</a>
+                  </p> 
+                  <p>
+                      <span><i class="fa-solid fa-mobile-retro"></i></span>
+                    <a href="tel:+61 (02) 6722 2548">+61 (02) 6722 2548</a>
+                  </p> 
+                  <p>
+                      <span><i class="fa-solid fa-envelope"></i></span>
+                    <a href="mailto:contact@mart.com">contact@mart.com</a>
+                  </p> 
+                  <h3>contact-02</h3>
+                  <p>
+                      <span><i class="fa-solid fa-phone"></i></span>
+                    <a href="tel:+61 (02) 6722 2548">+61 (02) 6722 2548</a>
+                  </p> 
+                  <p>
+                      <span><i class="fa-solid fa-mobile-retro"></i></span>
+                    <a href="tel:+61 (02) 6722 2548">+61 (02) 6722 2548</a>
+                  </p> 
+                  <p>
+                      <span><i class="fa-solid fa-envelope"></i></span>
+                    <a href="mailto:contact@mart.com">contact@mart.com</a>
+                  </p> 
+              </div>    
+          </div>
+      </div>
+  </section>
+  <section class="signup">
+      <div class="container">
+          <div class="row">
+              <div class="cards">
+                  <img src="{%static 'mart/images/cards.png' %}" alt="">
+              </div>
+              <div class="subs">
+                  <div>
+                  <h2>Sign up for emails</h2>
+                  </div>
+                  <div>
+                      <form>
+                          <input type="email" placeholder="Enter your email">
+                          <button class="btn" type="button">Subscribe</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- form section -->
+
+<!-- info section -->
+<section class="info_section ">
+  <div class="info_container ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <h6>
+            ABOUT US
+          </h6>
+          <p>
+            Nostrum praesentium, animi pariatur eaque harum amet necessitatibus unde aliquam molestias, sapiente cumque aspernatur officia molestiae possimus atque
+          </p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h6>
+            CONTACT US
+          </h6>
+          <div class="info_link-box">
+            <a href="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span> Location </span>
+            </a>
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>+01 12345678901</span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span> demo@gmail.com</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h6>
+            Our Products
+          </h6>
+          <p>
+            Sapiente quidem fugit sed incidunt aut quia eos consectetur, iste eius nobis ullam voluptatem esse mollitia amet. Quibusdam eos inventore neque explicabo aliquid quos
+          </p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="info_form ">
+            <h6>
+              Newsletter
+            </h6>
+            <form action="#">
+              <input type="email" placeholder="Enter your email">
+              <button>
+                Subscribe
+              </button>
+            </form>
+          </div>
+          <div class="social_container">
+            <div class="social_box">
+              <a href="">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end info section -->
+</main>
+
+
+  <!-- footer section -->
+  <footer class=" footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By MIN MART
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="{% static 'jquery-3.4.1.min.js' %}"></script>
+  <!-- form validator plugin -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script> -->
+  <script src="{% static 'validator.js' %}"></script>
+  <!-- custom js -->
+  <script src="{% static 'form.js' %}"></script>
+</body>
+
+</html>

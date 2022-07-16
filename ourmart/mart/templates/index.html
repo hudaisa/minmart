@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <title>Min-Mart</title>
+  {% load static %}
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css'%}">
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="{% static 'slick/slick-theme.css' %}">
+  <link rel="stylesheet" href="{% static 'slick.css' %}">
+  <!-- font awesome style -->
+  <link href="{% static 'font-awesome.min.css'%}" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'style.css'%}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'responsive.css'%}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <div class="delivery-info">
+      <div class="container">
+      <p>
+        Free Delivery on orders above Rs 800. Rs 150 will apply for delivery on order less than Rs 800.
+      </p>
+      </div>
+    </div>
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand " href="{% url 'index' %}"> Min-Mart </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}"> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'review' %}">review</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                  <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                </a>
+              </li>
+              <form method="get" action="/search" class="Form form-inline justify-content-center">
+                <input type="search" placeholder="search items" name="query" id="query" class="search">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->z
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 col-lg-5">
+                  <div class="detail-box">
+                    <h1>
+                      Min Mart
+                    </h1>
+                    <p>
+                      Save time for both the buyer and retailer, reducing phone calls about availability, specifications, hours of operation or other information easily found on "MIN MART"
+                    </p>
+                    <div class="btn-box">
+                      <a href="#category" class="btn1">
+                        Buy Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                  <div class="img-box">
+                    <img src="{% static 'mart/images/slider-img.png' %}" alt="slider">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 col-lg-5">
+                  <div class="detail-box">
+                    <h1>
+                      Sale 20% off
+                    </h1>
+                    <h2>
+                      Fresh Fruits
+                    </h2>
+                    <p>
+                      Min Mart is one of the leading store to buy Grocery Online in Karachi. We deliver the fresh Fruits, Vegetables, as well as healthy and organic grocery 
+                    </p>
+                    <div class="btn-box">
+                      <a href="#category" class="btn1">
+                        Buy Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                  <div class="img-box">
+                    <img src="{% static 'mart/images/slider-img.png' %}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 col-lg-5">
+                  <div class="detail-box">
+                    <h1>
+                      Delivery Info
+                    </h1>
+                    <p>
+                      No delivery charges on orders more than 800 pkr..Enjoy our services and get your orders deliver at your doorsteps. 
+                    </p>
+                    <div class="btn-box">
+                      <a href="#category" class="btn1">
+                        Buy Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                  <div class="img-box">
+                    <img src="{% static 'mart/images/slider-img.png' %}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel_btn-box container">
+          <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
+            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- categories -->
+
+  <section>
+    <span id="category">
+    <div class="container">
+        <div class="heading">
+            <h2>Our 
+              <strong>Categories</strong>
+            </h2>
+        </div>
+        <div class="categories">
+            <a href="{% url 'beverages' %}">
+              <div><img src="{% static 'mart/images/beverages.jpg' %}" alt="beverages" class="image">
+                <a href="{% url 'beverages' %}">BEVERAGES</a>
+            </a>
+            </div>
+            <a href="{% url 'chocolates' %}">
+              <div><img src="{%static 'mart/images/chocolates.jpg' %}" alt="chocolates" class="image">
+                <a href="{% url 'chocolates' %}">CHOCOLATES</a>
+              </div>
+            </a>
+            <a href="{% url 'edible' %}">
+            <div><img src="{%static 'mart/images/edible.jpg' %}" alt="edible" class="image">
+              <a href="{% url 'edible' %}">EDIBLE ITEMS</a>
+            </div>
+            </a>
+            <a href="{% url 'dairyproduct' %}">
+            <div><img src="{%static 'mart/images/milk-products.jpg' %}" alt="dairy-products" class="image">
+              <a href="{% url 'dairyproduct' %}">DAIRY PRODUCTS</a>
+            </div>
+            </a>
+            <a href="{% url 'oil_ghee' %}">
+            <div><img src="{%static 'mart/images/oil&ghee.jpg' %}" alt="oil&ghee" class="image">
+              <a href="{% url 'oil_ghee' %}">OIL & GHEE</a>
+            </div>
+            </a>
+            <a href="{% url 'spices' %}">
+            <div><img src="{%static 'mart/images/spices.jpg' %}" alt="spices" class="image">
+              <a href="{% url 'spices' %}">SPICES</a>
+            </div>
+            </a>
+            <a href="{% url 'personal_care' %}">
+            <div><img src="{%static 'mart/images/personal-care.jpg' %}" alt="personal-care" class="image">
+              <a href="{% url 'personal_care' %}">PERSONAL CARE</a>
+            </div>
+            </a>
+            <a href="{% url 'staples' %}">
+            <div><img src="{%static 'mart/images/staples.jpg' %}" alt="staples" class="image">
+              <a href="{% url 'staples' %}">STAPLES</a>
+            </div>
+            </a>
+            <a href="{% url 'tea_coffee' %}">
+            <div><img src="{%static 'mart/images/tea.jpg' %}" alt="tea&coffe" class="image">
+              <a href="{% url 'tea_coffee' %}">TEA & COFFEE</a>
+            </div>
+            </a>
+            <a href="{% url 'fruits_vegetable' %}">
+            <div><img src="{%static 'mart/images/fruits.jpg' %}" alt="fruits" class="image">
+              <a href="{% url 'fruits_vegetable' %}">FRUITS & VEGETABLES</a>
+            </div>
+            </a>
+            <a href="{% url 'bakery_items' %}">
+            <div><img src="{%static 'mart/images/bakery.jpg' %}" alt="bakery" class="image">
+              <a href="{% url 'bakery_items' %}">BAKERY ITEMS</a>
+            </div>
+            </a>
+            <a href="{% url 'ready_to_eat' %}">
+            <div><img src="{%static 'mart/images/ready-to-eat.jpg' %}" alt="ready-to-eat" class="image">
+              <a href="{% url 'ready_to_eat' %}">READY TO EAT</a>
+            </div>
+            </a>
+            <a href="{% url 'icecream_desert' %}">
+            <div><img src="{%static 'mart/images/icecream.jpg' %}" alt="icecream" class="image">
+              <a href="{% url 'icecream_desert' %}">ICE-CREAM & DESSERT</a>
+            </div>
+            </a>
+            <a href="{% url 'snacks' %}">
+            <div><img src="{%static 'mart/images/snacks.jpg' %}" alt="snacks" class="image">
+              <a href="{% url 'snacks' %}">SNACKS</a>
+            </div>
+            </a>
+            <a href="{% url 'fruit_nut' %}">
+            <div><img src="{%static 'mart/images/fruit&nuts.jpg' %}" alt="fruit&nuts" class="image">
+              <a href="{% url 'fruit_nut' %}">FRUIT & NUTS</a>
+            </div>
+            </a>
+        </div>
+    </div>
+    </span>
+  </section>
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="detail-box">
+        <div class="heading_container heading_center">
+          <h2>
+            About
+            <strong>US</strong>
+          </h2>
+        </div>
+        <p>
+          Normal distribution of letters, as opposed to using 'Content here, content here', making it look like
+          readable English. Many desktop publishing packages and web page editors has a more-or-less normal
+          distribution of letters, as opposed to using 'Content here, content here', making it look like readable
+          English. Many desktop publishing packages and web page editors
+        </p>
+      </div>
+      <div class="col-md-9 mx-auto px-0">
+        <div class="img-box">
+          <img src="{%static 'mart/images/about-img.jpg' %}" alt="">
+        </div>
+        <div class="btn-box">
+          <a href="#category">
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding-bottom">
+    <div class="container ">
+      <div class="heading_container heading_center">
+        <h2>
+          Customer 
+          <strong>Reviews</strong>
+        </h2>
+      </div>
+      <div class="review-wrapper">
+            {% for review in reviews %}
+            <div class="box-element">
+              <img src="{%static 'mart/images/review.jpg' %}" alt="" class="review-img">
+              <h3><i class="far fa-user mr-1"></i> {{review.name}}</h3>
+              <span>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star checked"></i>
+              </span>
+            <div class="review-comment">
+              <p>{{review.review}}</p>
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="butn">
+        <a href="{% url 'review' %}" class="btns"> Add Your Review</a>
+        </div>
+      </div>
+  </section>
+
+  <!-- end client section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="info_container ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <h6>
+              ABOUT US
+            </h6>
+            <p>
+              Nostrum praesentium, animi pariatur eaque harum amet necessitatibus unde aliquam molestias, sapiente cumque aspernatur officia molestiae possimus atque
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h6>
+              CONTACT US
+            </h6>
+            <div class="info_link-box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span> Location </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>+01 12345678901</span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span> demo@gmail.com</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h6>
+              Our Products
+            </h6>
+            <p>
+              Sapiente quidem fugit sed incidunt aut quia eos consectetur, iste eius nobis ullam voluptatem esse mollitia amet. Quibusdam eos inventore neque explicabo aliquid quos
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="info_form ">
+              <h6>
+                Newsletter
+              </h6>
+              <form action="#">
+                <input type="email" placeholder="Enter your email">
+                <button>
+                  Subscribe
+                </button>
+              </form>
+            </div>
+            <div class="social_container">
+              <div class="social_box">
+                <a href="https://www.facebook.com/">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class=" footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By MIN MART
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="{% static 'jquery-3.4.1.min.js' %}"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'bootstrap.js' %}"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="{% static 'slick.min.js' %}"></script>
+  <!-- form validator plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+  <!-- custom js -->
+  <script src="{% static 'custom.js' %}"></script>
+  <script src="{% static 'slider.js' %}"></script>
+</body>
+
+</html>

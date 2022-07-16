@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+*{
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: 'Nunito', sans-serif;
+}
+.box {
+    /* background-color: #ff5b7d; */
+    height: 450px;
+    width: 383px;
+    margin: inherit;
+}
+section.back-btn {
+    margin-top: 30px;
+}
+
+.back-btn a {
+    background-color: #361040;
+    padding: 16px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 30px;
+    letter-spacing: 3px;
+}
+.back-btn a:hover {
+    background-color: #8e7c93;
+    color: black;
+}
+section {
+    margin: 40px 0;
+    padding: 0 85px;
+}
+h1 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+strong {
+    background-color: #ff5b7d;
+    padding: 12px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2.product_name {
+    /* color: black; */
+    /* color: white; */
+    font-size: 20px;
+    /* text-align: center; */
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.detail {
+    text-align: center;
+}
+
+.image {
+    /* box-shadow: hsl(0 , 0% , 80%) 0 0 16px; *//* 
+    background-color: #fff; */
+    border-radius: 4px;
+    padding: 10px;
+    /* width: 239px; */
+}
+
+.container{
+    max-width: 1240px;
+    margin: 0px auto;
+}
+.box {
+    /* background-color: #ff5b7d; */
+    padding: 30px 50px;
+    width: 340px;
+    box-shadow: hsl(0deg 0% 80%) 0 0 16px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-left: 55px;
+
+}
+
+section {
+    margin: 96px 0;
+    padding: 0 85px;
+}
+
+.add-to-cart img {
+
+    width: 500px;
+    /* height: 500px; */
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 100px 0px 115px;
+}
+
+h2.product_name {
+    /* color: white; */
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+
+.detail {
+    text-align: center;
+}
+
+.button{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color:  white;
+    background-color: #361040;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+.button:hover{
+    color: #ff5b7d;
+    box-shadow: 0px 1px 4px #361040;
+}

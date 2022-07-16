@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <title>Min-Mart</title>
+        {% load static %}
+
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css'%}">
+        <!-- font awesome style -->
+        <link href="{% static 'font-awesome.min.css'%}" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+        
+
+        <!-- Custom styles for this template -->
+        <link href="{% static 'style.css'%}" rel="stylesheet" />
+        <link rel="stylesheet" href="{% static 'beverages.css' %}">
+        <link rel="stylesheet" href="{% static 'product_detail.css' %}">
+        <!-- responsive style -->
+        <link href="{% static 'responsive.css'%}" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="delivery-info">
+            <div class="container">
+            <p>
+              Free Delivery on orders above Rs 800. Rs 150 will apply for delivery on order less than Rs 800.
+            </p>
+            </div>
+        </div>
+        <header class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand " href="{% url 'index' %}"> Min-Mart </a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""> </span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}"> About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'review' %}">review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <form method="get" action="/search" class="Form form-inline justify-content-center">
+                    <input type="search" placeholder="search items" name="query" id="query" class="search">
+                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+                </ul>
+            </div>
+            </nav>
+        </div>
+        </header>
+        <section class="back-btn">
+            <a href="{% url 'edible' %}">
+                &#8592;
+                Continue Shopping
+            </a>
+        </section>
+        <section>
+            <div>
+                <h1>
+                    Product
+                    <strong>detail</strong>
+                </h1>
+            </div>
+            {% if edible_items%}
+            <div class="main">
+                <div class="container box">
+                    <div class="image">
+                        <img src="{{ edible_items.image.url }}"alt="image">
+                    </div>
+                    <hr>
+                    <div class="detail">
+                        <h2 class="product_name">{{ edible_items.edibleitems_name}}</h2>
+                        <p class="product_price">Price: Rs. {{ edible_items.edibleitems_price }}</p>
+                        <a href="{% url 'checkout' %}" class="button">BUY NOW</a>
+                    </div>
+                </div>
+                <div class="add-to-cart">
+                    <img src="{%static 'mart/images/shop2.webp' %}" alt="">
+                </div>
+                </div>
+            {% else %}
+                <p>no results found</p>
+            {% endif %}
+        </section>
+        <footer class=" footer_section">
+            <div class="container">
+              <p>
+                &copy; <span id="displayYear"></span> All Rights Reserved By MIN MART
+              </p>
+            </div>
+          </footer>
+    </body>
+</html>

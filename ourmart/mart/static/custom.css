@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #0c0c0c;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+.col-lg-6, .col-lg-12{
+margin-top: 10px;
+}
+
+.back-btn a {
+  background-color: #361040;
+  padding: 16px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 30px;
+  letter-spacing: 3px;
+}
+.back-btn a:hover {
+  background-color: #8e7c93;
+  color: black;
+}
+
+section {
+padding: 0 50px;
+margin-top: 50px;
+}
+
+.box-element{
+  box-shadow: hsl(0 , 0% , 80%) 0 0 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.box-element h3 {
+  font-weight: 700;
+  font-size: 22px;
+}
+.checkout {
+  text-align: -webkit-center;
+}
+
+/* input#email {
+  position: relative;
+  top: 30px;
+} */
+.form-field{
+  width: 250px;
+  display: inline-block;
+  padding: 5px;
+}
+
+input#form-btn {
+  background-color: green;
+  color: white;
+  width: 510px;
+  outline: none;
+  height: 45px;
+} 
+
+.hidden{
+  display: none;
+}
+
+label#name-error {
+  color: black;
+  position: relative;
+  left: 0;
+}
+
+label#email-error {
+  color: black;
+  position: relative;
+  left: 0;
+}
